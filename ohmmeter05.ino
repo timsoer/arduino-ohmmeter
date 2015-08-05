@@ -120,6 +120,10 @@ void loop() {
   }
 
   Serial.print("Rx = ");
+  if (Rx > 1000000){
+    Serial.print((Rx /1000000),2);
+    Serial.println("  mohm");
+  } else
   if (Rx > 1000) {
     Serial.print((Rx / 1000), 2);
     Serial.println("  kohm");
